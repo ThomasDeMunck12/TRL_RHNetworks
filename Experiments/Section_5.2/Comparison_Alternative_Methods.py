@@ -117,19 +117,23 @@ for i in range_:
         PPPO_eval = PPPO[j]
         perc = (PPPO_eval-max_p)/max_p
 
-        if PPPO_eval >= max_p:
+        if PPPO_eval >= max_p *1.001:
             improv = True
             max_p= PPPO_eval 
             k = 0
+            if l < 5:
+                print(i, " - ", j, " - ", improv)
         else:
             improv = False
             k += 1
+            if l < 5:
+                print(i, " - ", j, " - ", improv, " - ")
         
         if j > 50:
-            if k == 10:
-                if max_p > 0:
-                    num_iterations[l, 3] = j +1
-                    break
+            if k >= 5:
+                #if max_p > 0:
+                num_iterations[l, 3] = j +1
+                break
                
             if j ==len(PPPO)-1:
                 num_iterations[l, 3] = j +1
@@ -141,7 +145,7 @@ for i in range_:
         PPO_eval = PPO_1[j]
         perc = (PPO_eval-max_1)/max_1
 
-        if PPO_eval >= max_1:
+        if PPO_eval >= max_1 *1.001:
             improv = True
             max_1 = PPO_eval 
             k = 0
@@ -150,10 +154,10 @@ for i in range_:
             k += 1
         
         if j > 50:
-            if k == 10:
-                if max_1 > 0.85 * max_p :
-                    num_iterations[l, 0] = j+1
-                    break
+            if k >= 5:
+                #if max_1 > 0.85 * max_p :
+                num_iterations[l, 0] = j+1
+                break
             
             if j ==len(PPO_1)-1:
                 num_iterations[l, 0] = j +1
@@ -164,7 +168,7 @@ for i in range_:
         PPO_eval = PPO_2[j]
         perc = (PPO_eval-max_2)/max_2
 
-        if PPO_eval >= max_2:
+        if PPO_eval >= max_2 *1.001:
             improv = True
             max_2 = PPO_eval 
             k = 0
@@ -173,10 +177,10 @@ for i in range_:
             k += 1
             
         if j > 50:
-            if k == 10:
-                if max_2 > 0.85* max_p:
-                    num_iterations[l, 1] = j +1
-                    break
+            if k >= 5:
+                #if max_2 > 0.85* max_p:
+                num_iterations[l, 1] = j +1
+                break
                 
             if j ==len(PPO_2)-1:
                 num_iterations[l, 1] = j +1
@@ -188,7 +192,7 @@ for i in range_:
         PPO_eval = PPO_3[j]
         perc = (PPO_eval-max_3)/max_3
 
-        if PPO_eval >= max_3:
+        if PPO_eval >= max_3*1.001:
             improv = True
             max_3 = PPO_eval 
             k = 0
@@ -197,10 +201,10 @@ for i in range_:
             k += 1
             
         if j > 50:
-            if k == 10:
-                if max_3 >  0.85* max_p:
-                    num_iterations[l, 2] = j +1
-                    break
+            if k >= 5:
+                #if max_3 >  0.85* max_p:
+                num_iterations[l, 2] = j +1
+                break
                 
             if j ==len(PPO_3)-1:
                 num_iterations[l, 2] = j +1

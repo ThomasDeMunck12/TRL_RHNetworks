@@ -6,7 +6,7 @@ This repository contains the code and data used to reproduce the numerical exper
 
 ## Overview
 This project implements a reinforcement learning framework for jointly optimizing pricing and vehicle repositioning decisions in ride-hailing networks. The approach combines:
-- A Markov Decision Process (MDP) environment.
+- A Markov decision process (MDP) environment.
 - Actor-critic methods based on Proximal Policy Optimization (PPO).
 - Pretraining using expert policies derived from lookahead strategies.
 
@@ -31,13 +31,13 @@ These folders contain the main components of the methodology:
 ### Experiment and pipeline scripts
 These folders contain scripts used to generate the results presented in the paper:
 - `PPO_no_pretraining`: Training and evaluation of PPO agents without pretraining.
-- `PPO_pretraining`: Pretraining of actor-critic networks followed by PPO training.
+- `PPO_pretraining`: Pretraining of actor-critic networks followed by PPO training and evaluation.
 - `LH_strategies`: Simulation of lookahead strategies used to generate expert state-decision datasets.
-- `Experiments`: Scripts and output data used to generate the figures in Section 5. Subfolders correspond to specific subsections of the paper.
+- `Experiments`: Scripts and output data used to generate figures and tables in Section 5. Subfolders correspond to the specific subsections of the paper.
 
 ## Installation
 Clone the repository and install the required dependencies:
 ```bash
-git clone <repository_url>
-cd <repository_name>
+git clone https://github.com/ThomasDeMunck12/RL_wPT_RHNetworks/tree/main
+cd <repository_name> RL_wPT_RHNetworks
 pip install -r requirements.txt

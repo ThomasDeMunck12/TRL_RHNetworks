@@ -42,4 +42,4 @@ These folders contain scripts used to generate the results presented in the pape
 Clone the repository:
 ```bash
 git clone https://github.com/ThomasDeMunck12/RL_wPT_RHNetworks/tree/main
-cd <repository_name> RL_wPT_RHNetworks
+cd RL_wPT_RHNetworks

@@ -39,8 +39,7 @@ These folders contain scripts used to generate the results presented in the pape
 - `Experiments`: Scripts and output data used to generate figures and tables in Section 5. Subfolders correspond to the specific subsections of the paper.
 
 ## Installation
-Clone the repository and install the required dependencies:
+Clone the repository:
 ```bash
 git clone https://github.com/ThomasDeMunck12/RL_wPT_RHNetworks/tree/main
 cd <repository_name> RL_wPT_RHNetworks
-pip install -r requirements.txt

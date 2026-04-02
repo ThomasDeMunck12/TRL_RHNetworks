@@ -19,6 +19,13 @@ We use the following datasets:
 - March 2019 – High Volume For-Hire Vehicle Trip Records  
 The scripts in the `data` folder preprocess these datasets to estimate model parameters such as arrival rates, travel times, and distances.
 
+## Dependencies 
+The project mainly relies on the following packages:
+- Python 3.10+
+- NumPy
+- PyTorch
+- Gymnasium
+- Stable-Baselines3
 ## Repository Structure
 
 ### Core modules

@@ -35,7 +35,7 @@ These folders contain the main components of the methodology:
 - `ppo`: Implementation of the actor-critic framework and a customized PPO algorithm with two decision levels, building on Stable-Baselines3.
 - `pretraining`: Implementation of actor and critic pretraining procedures tailored to the proposed PPO framework.
 
-### Experiment and pipeline scripts
+### Additional modules
 These folders contain scripts used to generate the results presented in the paper:
 - `PPO_no_pretraining`: Training and evaluation of PPO agents without pretraining.
 - `PPO_pretraining`: Pretraining of actor-critic networks followed by PPO training and evaluation.

@@ -1,18 +1,43 @@
-# Reinforcement Learning with Pretraining for Ride-Hailing Networks
-This repository contains all the code supporting numerical experiments in "Reinforcement Learning with Pretraining for Pricing and Repositioning in Ride-Hailing Networks". 
+# Reinforcement Learning with Pretraining for Pricing and Repositioning in Ride-Hailing Networks
 
-The raw data used in Numerical Experiments can be accessed from: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page. See 'February, March 2019 - High Volume For-Hire Vehicle Trip Records" and "February, March 2019 - High Volume For-Hire Vehicle Trip Records". 
+This repository contains the code and data used to reproduce the numerical experiments from the paper:
 
-# Repository structure 
-The folders with lower capital letters contain the main code to compute the results of the paper:
-- data: code to derive parameters used in the paper, and final parameters (i.e., arrival rates, distances, and travel times parameters), saved as numpy files.
-- envs: code to implement the Markov decision process described in the paper, using the package Gymnasium.
-- ppo: code to implement our actor-critic framework, and our specific adaptation of the PPO algorithm with two decision levels. This code builds upon the implementation of the PPO algorithm presented in the package Stable-Baselines3
-- pretraining: code to implement actor pretraining, and critic pretraining such as described in the paper. This code is specifically tailored to our adaptation of our PPO algorithm, but can be easily adapted to any DRL algorithm proposed by the package Stable-Baselines3.
+**"Reinforcement Learning with Pretraining for Pricing and Driver Repositioning in Ride-Hailing Networks"**
 
-The folders with upper capital letters contain additional code to derive the results of the paper:
-- PPO_no_pretraining: Code to simulate the lookahead strategies in the MDP, and generate the state-decision datasets approximating the expert policy provided by one of the lookahead strategies.
-- PPO_pretraining: Code to pretrain our actor-critic networks, and then continue the training process by actively learning using the PPO algorithm.
-- LH_strategies: Code to simulate the lookahead strategies in the MDP, and generate the state-decision datasets approximating the expert policy provided by one of the lookahead strategies.
--Experiments: Code and output data to generate figures presented in Section 5. This folder is divided into subfolders, each of them representing a specific subsection of the article.
+## Overview
+This project implements a reinforcement learning framework for jointly optimizing pricing and vehicle repositioning decisions in ride-hailing networks. The approach combines:
+- A Markov Decision Process (MDP) environment.
+- Actor-critic methods based on Proximal Policy Optimization (PPO).
+- Pretraining using expert policies derived from lookahead strategies.
 
+## Data
+The raw data used in Section 5 is publicly available from the NYC Taxi & Limousine Commission:
+https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+We use the following datasets:
+- February 2019 – High Volume For-Hire Vehicle Trip Records  
+- March 2019 – High Volume For-Hire Vehicle Trip Records  
+The scripts in the `data` folder preprocess these datasets to estimate model parameters such as arrival rates, travel times, and distances.
+
+## Repository Structure
+
+### Core modules
+These folders contain the main components of the methodology:
+- `data`: Scripts to preprocess raw data and generate model parameters (arrival rates, distances, travel times), stored as NumPy files.
+- `envs`: Implementation of the MDP environment using Gymnasium.
+- `ppo`: Implementation of the actor-critic framework and a customized PPO algorithm with two decision levels, building on Stable-Baselines3.
+- `pretraining`: Implementation of actor and critic pretraining procedures tailored to the proposed PPO framework.
+
+### Experiment and pipeline scripts
+These folders contain scripts used to generate the results presented in the paper:
+- `PPO_no_pretraining`: Training and evaluation of PPO agents without pretraining.
+- `PPO_pretraining`: Pretraining of actor-critic networks followed by PPO training.
+- `LH_strategies`: Simulation of lookahead strategies used to generate expert state-decision datasets.
+- `Experiments`: Scripts and output data used to generate the figures in Section 5. Subfolders correspond to specific subsections of the paper.
+
+## Installation
+Clone the repository and install the required dependencies:
+```bash
+git clone <repository_url>
+cd <repository_name>
+pip install -r requirements.txt

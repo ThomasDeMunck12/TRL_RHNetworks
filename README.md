@@ -3,6 +3,7 @@ This repository contains all the code supporting numerical experiments in "Reinf
 
 The raw data used in Numerical Experiments can be accessed from: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page. See 'February, March 2019 - High Volume For-Hire Vehicle Trip Records" and "February, March 2019 - High Volume For-Hire Vehicle Trip Records". 
 
+# Repository structure 
 The folders with lower capital letters contain the main code to compute the results of the paper:
 - data: code to derive parameters used in the paper, and final parameters (i.e., arrival rates, distances, and travel times parameters), saved as numpy files.
 - envs: code to implement the Markov decision process described in the paper, using the package Gymnasium.

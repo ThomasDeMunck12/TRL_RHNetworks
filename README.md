@@ -31,6 +31,8 @@ These folders contain the main components of the methodology:
 - `envs_2timescale`: Implementation of the two-timescale MDP formulation using Gymnasium
 - `ppo_2timescale`: Implementation of the two-timescale actor-critic framework along with a customized PPO algorithm, building on Stable-Baselines3.
 - `pretraining_2timescale`: Implementation of actor and critic pretraining procedures tailored to the proposed two-timescale actor-critic framework.
+- `pretraining_1timescale`: Implementation of actor and critic pretraining procedures tailored to the proposed single-timescale actor-critic framework.
+Note that the single-timescale PPO implementation is already developped by Stable-Baselines3
 
 ## Additional modules
 These folders contain scripts used to generate the results presented in the paper:

@@ -4,8 +4,8 @@ This repository contains the code and data used to reproduce the numerical exper
 
 ## Overview
 This project implements a reinforcement learning framework for jointly optimizing pricing and vehicle repositioning decisions in ride-hailing networks. The approach combines:
-- A Markov decision process (MDP) environment.
-- Actor-critic methods based on Proximal Policy Optimization (PPO).
+- A Markov decision process (MDP) formulation.
+- Two-timescale actor-critic methods based on Proximal Policy Optimization (PPO).
 - Pretraining using expert policies derived from lookahead strategies.
 
 ## Data
@@ -27,9 +27,10 @@ The project mainly relies on the following packages:
 ## Core modules
 These folders contain the main components of the methodology:
 - `data`: Scripts to preprocess raw data and generate model parameters (arrival rates, distances, travel times), stored as NumPy files.
-- `envs`: Implementation of the MDP environment using Gymnasium.
-- `ppo`: Implementation of the actor-critic framework and a customized PPO algorithm with two decision levels, building on Stable-Baselines3.
-- `pretraining`: Implementation of actor and critic pretraining procedures tailored to the proposed PPO framework.
+- `envs_1timescale`: Implementation of the singe-timescale MDP formulation using Gymnasium.
+- 'envs_2timescale': Implementation of the two-timescale MDP formulation using Gymnasium
+- `2timescale_ppo`: Implementation of the two-timescale actor-critic framework along with a customized PPO algorithm, building on Stable-Baselines3.
+- `pretraining`: Implementation of actor and critic pretraining procedures tailored to the proposed two-timescale actor-critic framework.
 
 ## Additional modules
 These folders contain scripts used to generate the results presented in the paper:

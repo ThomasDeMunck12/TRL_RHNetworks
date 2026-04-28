@@ -27,8 +27,8 @@ The project mainly relies on the following packages:
 ## Core modules
 These folders contain the main components of the methodology:
 - `data`: Scripts to preprocess raw data and generate model parameters (arrival rates, distances, travel times), stored as NumPy files.
-- `envs_1timescale`: Implementation of the singe-timescale MDP formulation using Gymnasium.
-- 'envs_2timescale': Implementation of the two-timescale MDP formulation using Gymnasium
+- `env_1timescale`: Implementation of the singe-timescale MDP formulation using Gymnasium.
+- `envs_2timescale`: Implementation of the two-timescale MDP formulation using Gymnasium
 - `2timescale_ppo`: Implementation of the two-timescale actor-critic framework along with a customized PPO algorithm, building on Stable-Baselines3.
 - `pretraining`: Implementation of actor and critic pretraining procedures tailored to the proposed two-timescale actor-critic framework.
 

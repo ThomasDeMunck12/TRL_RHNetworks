@@ -2,8 +2,6 @@
 
 This repository contains the code and data used to reproduce the numerical experiments from the paper: **"Reinforcement Learning with Pretraining for Pricing and Driver Repositioning in Ride-Hailing Networks"**
 
-## /!\ The repository is under construction. All core modules have been imported. Additional modules need to be imported in order to complete the release. /!\
-
 ## Overview
 This project implements a reinforcement learning framework for jointly optimizing pricing and vehicle repositioning decisions in ride-hailing networks. The approach combines:
 - A Markov decision process (MDP) formulation.
